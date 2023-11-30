@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".presentation.newNote.AddNewNoteFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        android:labelFor="@id/note_title"
+        app:boxStrokeColor="@null"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:hintTextColor="@null"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textCursorDrawable="@null" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/category_dropdown"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/select_category"
+        android:labelFor="@id/dropdown_editable"
+        app:boxStrokeColor="@null"
+        app:hintTextColor="@null"
+        app:layout_constraintTop_toBottomOf="@id/title_input_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/dropdown_editable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textCursorDrawable="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/note_description_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="@string/note_description"
+        android:labelFor="@id/note_description"
+        app:boxStrokeColor="@null"
+        app:hintTextColor="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_dropdown">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:scrollHorizontally="false"
+            android:textCursorDrawable="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
