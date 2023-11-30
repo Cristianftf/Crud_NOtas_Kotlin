@@ -1,3 +1,3 @@
 # Crud_NOtas_Kotlin
-es una aplicacion de notas echa con Kotlin y android
- esta aplicacion es para la optativa de anroid nativo de las estudiantes Leslie Labrada Rodriguez y Lisandra Oliva Salgado del grupo FTE404
+en esta aplicacion de notas con kotlin estan las integrantes:Leslie Daimelis Labrada Rodrigues Lisandra Oliva Salgado y Natasha Franco Aguilar del grupo FTE 404
+
